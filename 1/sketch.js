@@ -2,10 +2,16 @@
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(255, 20, 120);
   rectMode(CENTER);
+  background(255, 20, 120);
 }
 
 function draw() {
-  rect(width / 2, height / 2, 100);
+  //background(255, 20, 120);
+  let mw = map(mouseX, 0, width, 3, 300);
+  rect(width / 2, height / 2, mw);
+}
+
+function mouseClicked() {
+  background(random(255));
 }
